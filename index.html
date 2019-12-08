@@ -9,71 +9,150 @@
     <link rel= "stylesheet" href= "css/estilos.css">
 </head>
 <body>
-   <header>
-       <div class="contenedor">          
-        <ul>
-           <li><h1><a href="/pucv/site/edic/base/port/inicio.html" class="icon-book" target="_top"></a> SISTEMA BIBLIOTECARIO</h1></li>
-           <li><h3>Bicerrectoría Académica <br>Pontífica Universidad Católica de Valparaíso</h3></li>
-         </ul>
-           <input type= "checkbox" id="click-bar">
-           <label class="icon-menu" for="click-bar"></label>
-           <nav class="click">
-            <a href="">Nuestras Bibliotecas</a>
-            <a href="">Catálogo General</a>
-            <a href="">Aula Virtual</a>
-            <a href="">Navegador Académico</a>
-            <a href="">Recursos para Derecho</a>
-            <a href="">Recursos para Comercio</a>
-            <a href="">Naxos</a>
-            <a href="">Revistas Académicas PUCV</a>
-           </nav>
-           <input type= "checkbox" id="menu-bar">
-           <label class="icon-menu" for="menu-bar"></label>
-           <nav class="menu">
-            <a href="">Inicio</a>
-            <a href="">Catálogos</a>
-            <a href="">Colecciones</a>
-            <a href="">Servicios</a>
-            <a href="">Espacios</a>
-            <a href="">Proyectos</a>
-            <a href="">El Sistema</a>
-            <a href="">Directorio</a>
-           </nav>
-       </div>
-   </header>
-         <div class="slider">
-             <ul>
-                 <li><img src="img/elibros_2019.jpg" alt=""></li>
-                 <li><img src="img/base_carrousel_educartion_research.jpg" alt=""></li>
-                 <li><img src="img/base_carrousel_met.jpg" alt=""></li>
-                 <li><img src="img/base_carrousel_times.png" alt=""></li>
-              </ul>
-         </div>
-         <section id="main">
-             <div class="titulo">
-             <ul>
-             <li><h2>Últimos artículos publicados por la Pontificia Universidad Católica de Valparaíso</h2></li>
-             </ul>
-             </div>
-             <div class="articulos">
-             <ul>
-                 <li><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat nemo fugiat placeat</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
-                 <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ratione! Facilis mollitia id, </a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
-                 <li><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quia ipsa cum, impedit voluptate numquam a praesentium fuga,</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
-                 <li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit totam quidem reiciendis quo incidun</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
-                 <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis doloremque id cumque molestiae, modi possimus corrupti esse porro dolorem,</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
-             </ul>
+
+ <!-- HEADER -->
+
+    <header>
+        <div class="contenedor">          
+            <ul>
+                <li><h1 class="icon-book"><a href="index.html">SISTEMA BIBLIOTECARIO</a></h1></li>
+                <li><h3>Vicerrectoría Académica <br>Pontífica Universidad Católica de Valparaíso</h3></li>
+            </ul>
+
+                <!-- CLICK -->
+
+                <input type= "checkbox" id="click-bar">
+                <label class="icon-menu" for="click-bar"></label>
+                    <nav class="click">
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=todas" target="blank">Nuestras Bibliotecas</a>
+                        <a href="http://opac.pucv.cl/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&lang=es&base=BDPUCV" target="blank">Catálogo General</a>
+                        <a href="http://aula.virtual.ucv.cl/wordpress/" target="blank">Aula Virtual</a>
+                        <a href="https://nave13.ucv.cl/" target="blank">Navegador Académico</a>
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=derecho" target="blank">Recursos para Derecho</a>
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=gimpert" target="blank">Recursos para Comercio</a>
+                        <a href="http://biblioteca.ucv.cl/site/servicios/cubiculos.php" target="blank">Reserva de Cubículos</a>
+                        <a href="http://biblioteca.ucv.cl/site/colecciones/revistaspucv.php" target="blank">Revistas Académicas PUCV</a>
+                    </nav>
+
+                <!-- MENU -->
+
+                <input type= "checkbox" id="menu-bar">
+                <label class="icon-menu" for="menu-bar"></label>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="#">Catálogos</a>
+                                <ul class="submenu">
+                                    <li><a href="" target="blank">Catálogo Principal</a></li>
+                                    <li><a href="" target="blank">Catálogos Externos </a></li>
+                                    <li><a href="" target="blank">Catálogos Temáticos</a></li>
+                                    <li><a href="" target="blank">Catálogos Patrimoniales</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Colecciones</a>
+                                <ul class ="submenu">
+                                    <li><a href="" target="blank">Por Biblioteca</a></li>
+                                    <li><a href="" target="blank">Por Tema</a></li>
+                                    <li><a href="" target="blank">Revistas Indexadas a la PUCV</a></li>
+                                    <li><a href="" target="blank">Repositorios</a></li>
+                                    <li><a href="" target="blank">Colecciones Patrimoniales</a></li>
+                                    <li><a href="" target="blank">Colecciones Manuales Universitarios</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">El Sistema</a>
+                                <ul class="submenu">
+                                    <li><a href="" target="blank">Quienes Somos</a></li>
+                                    <li><a href="" target="blank">Nuestras Bibliotecas</a></li>
+                                    <li><a href="" target="blank">Reglamento</a></li>
+                                    <li><a href="" target="blank">Contacto</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Espacios</a>
+                                <ul class="submenu">
+                                    <li><a href="" target="blank">Aprendizaje</a></li>
+                                    <li><a href="" target="blank">Actividades Académicas</a></li>
+                                    <li><a href="" target="blank">Exposiciones</a></li>
+                                    <li><a href="" target="blank">Memoria</a></li>
+                                    <li><a href="" target="blank">Comunicación Científica</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Proyectos</a>
+                                <ul class="submenu">
+                                    <li><a href="" target="blank">Aprendizaje</a></li>
+                                    <li><a href="" target="blank">Edición Científica</a></li>
+                                    <li><a href="" target="blank">Culturales</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Servicios</a>
+                                <ul class="submenu">
+                                    <li><a href="" target="blank">Estudiantes</a></li>
+                                    <li><a href="" target="blank">Profesores</a></li>
+                                    <li><a href="" target="blank">Investigadores</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://biblioteca.ucv.cl/site/elsistema/directorio.php" target="blank">Directorio</a></li>
+                        </ul>
+                    </nav>
+
+                <!-- BUSQUEDA -->
+
+                <form method="GET" action="http://google.com/search">
+                    <fieldset>
+                        <input type="search" id="mySearch" name="q" 
+                        placeholder="Buscar en nuestro sitio..."/>
+                            <button type="submit"><label class="icon-search" for="mySearch"></label></button>
+                        <input type="hidden" name="sitesearch" value="http://biblioteca.ucv.cl/"/>                
+                    </fieldset>
+                </form>
+        </div>
+    </header>
+
+<!-- SLIDER -->
+
+    <div class="slider">
+            <ul>
+                <li><img src="img/elibros_2019.jpg" alt=""></li>
+                <li><img src="img/base_carrousel_educartion_research.jpg" alt=""></li>
+                <li><img src="img/base_carrousel_met.jpg" alt=""></li>
+                <li><img src="img/base_carrousel_times.png" alt=""></li>
+            </ul>
+    </div>
+
+<!-- ARTICULOS -->
+
+    <section id="main">
+        <div class="titulo">
+            <ul>
+                <li><h2>Últimos artículos publicados por la Pontificia Universidad Católica de Valparaíso</h2></li>
+            </ul>
+        </div>
+        <div class="articulos">
+            <ul>
+                <li><a href="#" target="blank">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat nemo fugiat placeat</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
+                <li><a href="#" target="blank">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ratione! Facilis mollitia id, </a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
+                <li><a href="#" target="blank">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quia ipsa cum, impedit voluptate numquam a praesentium fuga,</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
+                <li><a href="#" target="blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit totam quidem reiciendis quo incidun</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
+                <li><a href="#" target="blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis doloremque id cumque molestiae, modi possimus corrupti esse porro dolorem,</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
+            </ul>
+        </div>
+    </section>
+
+<!-- INFORMACION CONTACTO -->
+
+    <nav id="info">
+            <div class="informacion">
+                <ul>
+                    <li>2019 Sistema Biblioteca</li>
+                    <li><a href="" target="blank">Pontífica Universidad Católica de Valparaíso</a></li>
+                    <li><a href="" target="blank">Avenida Brasil 2950 - Código Postal 2374631 - Valparaíso - Chile</a></li>
+                    <li>Fonos 56-32-2273260 56-32-2273261</li>
+                </ul>
             </div>
-         </section>
-         <section id="info">
-             <div class="informacion">
-                 <ul>
-                     <li>2019 Sistema Biblioteca</li>
-                     <li><a href="">Pontífica Universidad Católica de Valparaíso</a></li>
-                     <li><a href="">Avenida Brasil 2950 - Código Postal 2374631 - Valparaíso - Chile</a></li>
-                     <li>Fonos 56-32-2273260 56-32-2273261</li>
-                 </ul>
-             </div>
-         </section>
+    </nav>
+
+<!-- LINKS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
