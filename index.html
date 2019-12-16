@@ -6,35 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema</title>
     <link rel= "stylesheet" href= "css/fontello.css">
-    <link rel= "stylesheet" href= "css/estilos.css">
+    <link rel= "stylesheet" href= "css/estilosss.css">
 </head>
 <body>
-
- <!-- HEADER -->
-
+    
+<!-- HEADER -->
+    
     <header>
         <div class="contenedor">          
             <ul>
-                <li><h1 class="icon-book"><a href="index.html">SISTEMA BIBLIOTECARIO</a></h1></li>
+                <li><h1 class="icon-book" ><a href="index.html">SISTEMA BIBLIOTECARIO</a></h1></li>
                 <li><h3>Vicerrectoría Académica <br>Pontífica Universidad Católica de Valparaíso</h3></li>
             </ul>
+            
+            
+        </div>
+    </header>
 
-                <!-- CLICK -->
+<!-- MENU & SEARCH -->
 
-                <input type= "checkbox" id="click-bar">
-                <label class="icon-menu" for="click-bar"></label>
-                    <nav class="click">
-                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=todas" target="blank">Nuestras Bibliotecas</a>
-                        <a href="http://opac.pucv.cl/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&lang=es&base=BDPUCV" target="blank">Catálogo General</a>
-                        <a href="http://aula.virtual.ucv.cl/wordpress/" target="blank">Aula Virtual</a>
-                        <a href="https://nave13.ucv.cl/" target="blank">Navegador Académico</a>
-                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=derecho" target="blank">Recursos para Derecho</a>
-                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=gimpert" target="blank">Recursos para Comercio</a>
-                        <a href="http://biblioteca.ucv.cl/site/servicios/cubiculos.php" target="blank">Reserva de Cubículos</a>
-                        <a href="http://biblioteca.ucv.cl/site/colecciones/revistaspucv.php" target="blank">Revistas Académicas PUCV</a>
-                    </nav>
-
-                <!-- MENU -->
+    <div class="banner">
 
                 <input type= "checkbox" id="menu-bar">
                 <label class="icon-menu" for="menu-bar"></label>
@@ -100,12 +91,13 @@
                     <fieldset>
                         <input type="search" id="mySearch" name="q" 
                         placeholder="Buscar en nuestro sitio..."/>
-                            <button type="submit" class="icon-search" for="mySearch"></button>
+                            <button class="icon-search" for="mySearch"></button>
                         <input type="hidden" name="sitesearch" value="http://biblioteca.ucv.cl/"/>                
                     </fieldset>
                 </form>
-        </div>
-    </header>
+        
+
+    </div>
 
 <!-- SLIDER -->
 
@@ -118,15 +110,36 @@
             </ul>
     </div>
 
-<!-- ARTICULOS -->
+<!-- CLICK -->
+    
+    <div class="clickeado">
 
-    <section id="main">
+                <input type= "checkbox" id="click-bar">
+                <label class="icon-menu" for="click-bar"></label>
+                    <nav class="click">
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=todas" target="blank">Nuestras Bibliotecas</a>
+                        <a href="http://opac.pucv.cl/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&lang=es&base=BDPUCV" target="blank">Catálogo General</a>
+                        <a href="http://aula.virtual.ucv.cl/wordpress/" target="blank">Aula Virtual</a>
+                        <a href="https://nave13.ucv.cl/" target="blank">Navegador Académico</a>
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=derecho" target="blank">Recursos para Derecho</a>
+                        <a href="http://biblioteca.ucv.cl/site/elsistema/bibliotecas/bibliotecas.php?biblioteca=gimpert" target="blank">Recursos para Comercio</a>
+                        <a href="http://biblioteca.ucv.cl/site/servicios/cubiculos.php" target="blank">Reserva de Cubículos</a>
+                        <a href="http://biblioteca.ucv.cl/site/colecciones/revistaspucv.php" target="blank">Revistas Académicas PUCV</a>
+                    </nav>
+    </div>
+
+<!-- MAIN -->
+
+                <!-- ARTICULOS -->
+
+    <main id="main">
+
         <div class="titulo">
             <ul>
                 <li><h2>Últimos artículos publicados por la Pontificia Universidad Católica de Valparaíso</h2></li>
             </ul>
         </div>
-        <div class="articulos">
+        <nav class="articulos">
             <ul>
                 <li><a href="#" target="blank">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat nemo fugiat placeat</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
                 <li><a href="#" target="blank">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ratione! Facilis mollitia id, </a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
@@ -134,21 +147,21 @@
                 <li><a href="#" target="blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit totam quidem reiciendis quo incidun</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
                 <li><a href="#" target="blank">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis doloremque id cumque molestiae, modi possimus corrupti esse porro dolorem,</a><p>2020; Cáceres-Soto, M. | Sepúlveda, H.H. | Muñoz-Mellado, K. | Artal, O.</p></li>
             </ul>
-        </div>
-    </section>
+        </nav>
+    </main>
 
 <!-- INFORMACION CONTACTO -->
 
-    <nav id="info">
-            <div class="informacion">
+    <footer>
+            <nav class="informacion">
                 <ul>
-                    <li>2019 Sistema Biblioteca</li>
+                    <li class="register"> &reg; 2019 Sistema Biblioteca</li>
                     <li><a href="" target="blank">Pontífica Universidad Católica de Valparaíso</a></li>
-                    <li><a href="" target="blank">Avenida Brasil 2950 - Código Postal 2374631 - Valparaíso - Chile</a></li>
+                    <li><a href="https://www.google.com/maps/place/Brasil+2950,+Valpara%C3%ADso/@-33.044917,-71.6078716,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e0c50eed51c1:0xf0f60ae997d8a11c!8m2!3d-33.0449215!4d-71.6056829" target="blank">Avenida Brasil 2950 - Código Postal 2374631 - Valparaíso - Chile</a></li>
                     <li>Fonos 56-32-2273260 56-32-2273261</li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+    </footer>
 
 <!-- LINKS -->
 

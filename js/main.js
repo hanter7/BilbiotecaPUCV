@@ -11,5 +11,8 @@ $(document).ready (function(){
             $(this).addClass('activado');
             $(this).children('ul').slideDown();
         }
-    })
+    });
+
 });
+
+
