@@ -9,11 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: #fff;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
 /*HEADER*/
 
 header {
+    grid-row: 1/2;
     width: 100vw;
     height: 100px;
     background: #102862;
@@ -75,6 +78,7 @@ header .contenedor h3 {
 /* MENU*/
 
 .banner {
+    grid-row: 2/3;
     margin-top: 120px;
     margin-left: 20px;
     margin-right: 20px;
@@ -93,6 +97,7 @@ header .contenedor h3 {
 }
 
 .menu {
+    z-index: 50;
     position: absolute;
     top: 140px;
     right: 0;
@@ -189,7 +194,9 @@ input {
 /* SLIDER */
 
 .slider {
+    grid-row: 3/4;
     width: 95%;
+    height: 95%;
     margin: auto;
     overflow: hidden;
 }
@@ -198,13 +205,15 @@ input {
     padding: 0;
     display: flex;
     width: 400%;
-
+    
     animation: change 20s infinite alternate ease-in-out;
 }
 
 .slider li {
     width: 100%;
+    height: 100%;
     list-style: none;
+    justify-content: center;
 }
 
 .slider img {
@@ -229,6 +238,7 @@ input {
 /* A UN SOLO CLICK */
 
 .clickeado {
+    grid-row: 4/5;
     margin-top: 5px;
 }
 
@@ -251,16 +261,16 @@ input {
 
 .clickeado .click {
     position: absolute;
-    top: 340px;
+    margin-top:10%;
     left: 0;
     width: 100%;
     height: 100vh;
     background: rgba(0, 128, 128, 1);
     transition: all 0.7s;
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
-.menu li{
+.click li{
     list-style: none;
 }
 
@@ -288,8 +298,12 @@ input {
 /* MAIN */
 
 #main {
+    width: 100%;
+    grid-row: 5/6;
     background: linear-gradient(#fff, rgba(131, 163, 238, 0.7), rgba(131, 163, 238, 0.7), rgba(131, 163, 238, 0.7));
 }
+
+
 
 .titulo ul {
     display: flex;
@@ -303,20 +317,65 @@ input {
 
 .titulo h2{
     color: black;
-    font-weight: 300;
+    font-weight: bold;
     float: left;
     font-size: 15px;
     text-justify: auto;
     text-align: center;
     letter-spacing: 1px;
     margin-left: 10px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.articulos {
+    grid-row: 3/4;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.articulos ul {
+    padding: 0;
+    display: flex;
+    width: 400%;
+    
+    animation: change 15s infinite alternate ease-in-out;
+}
+
+.articulos li {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    justify-content: center;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+.articulos img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+@keyframes change {
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+
+    25% {margin-left: -100%; }
+    45% {margin-left: -100%; }
+
+    50% {margin-left: -200%; }
+    70% {margin-left: -200%; }
+
+    75% {margin-left: -300%; }
+    100% {margin-left: -300%; }
 }
 
 /* FOOTER */
 
 footer {
+    grid-row: 6/7;
     background: rgb(1, 14, 14);
     height: 120px;
     width: 100%;
@@ -343,70 +402,238 @@ footer {
     text-decoration: none;
 }
 
-/* MEDIA QUERY 
+ /*MEDIA QUERY*/ 
 
 @media (min-width:1024px) {
     body {
-        grid-template-rows: auto auto auto auto auto auto;
-        grid-template-columns: auto auto auto auto auto;
         display: grid;
+        grid-template-columns: 70px 60% auto 70px;
     }
 
-    /* HEADER */
-
-    /*header{
-        grid-row: 1/2;
-        grid-column: 1/6;
-    }
-
-    /* MENU */
-
-       
-   /* .banner #menu-bar .label {
-        grid-row: 2/3;
-        grid-column: 1/6
-    }
-
-    .banner .menu {
-        position: absolute;
+    header{
+        grid-column: 1/5;
         width: 100%;
-        height: auto;
-        transform: translateX(0%);
-        float: left;
+        height: 110px;
+        background: #360914;
+        grid-template-columns: 320px 50% auto;
+        position: absolute;
+    }
+    
+    header .contenedor h1, h3{
+        grid-column: 3/4;
+        margin-left: 300px;
+    }   
+    
+    header .contenedor h1{
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    header .contenedor h3{
+        letter-spacing: 1px;
+    }
+
+    /* BANNER */
+
+    .banner {
+        grid-column: 3/4; 
+        grid-row: 3/4; 
+        position: relative;
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
+        background: #fff;     
     }
 
-    .banner .menu a{
-        border: none;
-    }
-
-    .banner .icon-menu{
+    #menu-bar .label {
         display: none;
     }
 
-    /* CLICK */
+    .menu {
+        position: static;
+        width: 70%;
+        height: 100%;
+        float: right;
+        transform: translateX(0%);
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+    }
 
-    /*.clickeado #click-bar .label {
+    .menu a{
+        border: none;
+    }
+
+    .icon-menu{
+        display: none;
+    }
+
+    /* SEARCH */
+
+    form {
+        width: 55%;
+        height: 17px;
+    }
+
+    fieldset {
+        height: 17px;
+        background: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0 0 0 0;
+    }
+    
+    input, button {
+        position: relative;
+        width: 145px;
+        height: 17px;
+        padding: 0;
+        border-radius: 5px;
+    }
+    
+    input {
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+        margin-left: 5px;
+        float: left;
+        font-size: 14px;
+    }
+
+    /* SLIDER */
+    
+    .slider {
+        grid-column: 1/3;
+        width: 60%;
+        height: 320px;
+        margin-top: 200px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+    }
+    
+    /* CLICK */
+    
+    .clickeado {
+        grid-row: 5/6;
+        grid-column: 3/4;
+    }
+
+    .clickeado #click-bar .label {
         display: none;
     }
 
     .clickeado .click {
-        position: absolute;
-        width: 100%;
-        height: auto;
+        position: inherit;
+        width: 65%;
+        height: 100%;
+        float: left;
+        margin-left: 20px;
+        margin-top: 5px;
         transform: translateX(0%);
-        float: right;
         display: flex;
         flex-direction: column;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
-    .clickeado .click a{
-        border: none;
+    .clickeado .click li{
+        border: #fff;
     }
+    
+    .clickeado .click a{
+        height: 12.5%;
+        padding-top: 10%;
+    }
+
 
     .clickeado .icon-menu{
         display: none;
+    }
+
+    /* MAIN */
+
+    #main {
+        grid-column: 1/5;
+        width: 100%;
+        background:linear-gradient(#fff, rgba(131, 163, 238, 0.7), rgba(131, 163, 238, 0.7), rgba(131, 163, 238, 0.7));
+        display: grid;
+        grid-template-columns: 70px 70% auto 70px;
+        grid-template-rows: auto auto;
+    }
+
+    #main .titulo{
+        grid-column: 2/4;
+        grid-row: 1/2;
+        text-align: center;     
+    }
+    
+    #main .titulo h2{
+        font-size: 18px;
+        font-weight: bold;
+        width: 70%;
+        justify-content: center;
+    }
+    
+    #main .articulos {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 70%;
+        height: 95%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .articulos ul {
+        padding: 0;
+        display: flex;
+        width: 200%;
+        
+        animation: change 10s infinite alternate ease-in-out;
+    }
+
+    .articulos li, img{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #main .articulos img {
+        width: 100%;
+        height: 50%;
+        float: left;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .articulos li {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        font-weight: 300;
+        letter-spacing: .5px;
+        margin-bottom: 40px;
+    }
+    
+
+    @keyframes change {
+        0% { margin-left: 0%; }
+        45% { margin-left: 0%; }
+    
+        50% {margin-left: -100%; }
+        100% {margin-left: -100%; }
+    }
+    
+    /* FOOTER*/
+    
+    footer {
+        grid-column: 1/5;
+        z-index: 20;
+    }
+
+    footer li{
+        font-size: 15px;
+        letter-spacing: .5px;
     }
 }
 
